@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Emotion Analyzer Dashboard
 
-## Getting Started
+This is a dashboard that analyzes the emotions of a text. It uses the [IBM Watson NLU](https://www.ibm.com/mx-es/products/natural-language-understanding) API to analyze the emotions of a text. The emotions are classified into 5 categories: joy, sadness, anger, fear and disgust.
 
-First, run the development server:
+![Dashboard](/public/Screenshot%202024-07-29%20at%203.23.41 p.m..png)
 
+![Text Area](/public/Screenshot%202024-07-29%20at%203.37.16 p.m..png)
+
+## How to run the project
+
+1. Clone the repository
+2. Install the dependencies with `pnpm install`
+3. Create a `.env.local` file with the following content:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+NEXT_PUBLIC_API_URL=http://localhost:3000/
 ```
+4. Run the project with `pnpm dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Note**: You need to have the backend running in order to use the dashboard. You can find the backend repository [here](https://github.com/hharieta/fastapi-watson-nlu)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn](https://shadcn.com/)
